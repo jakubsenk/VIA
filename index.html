@@ -1,425 +1,622 @@
 <style>
-    table {
-        font-family: Arial, Helvetica, sans-serif;
-        border-spacing: 0;
-        border-collapse: collapse;
-        min-height: 60px;
-    }
+	table {
+		font-family: Arial, Helvetica, sans-serif;
+		border-spacing: 0;
+		border-collapse: collapse;
+		min-height: 60px;
+	}
 
-    .schedPractice {
-        background-color: rgb(113, 128, 255);
-        width: 100%;
-    }
+	.schedPractice {
+		background-color: rgb(113, 128, 255);
+		width: 100%;
+	}
 
-    .schedLecture {
-        background-color: rgb(255, 100, 100);
-        width: 100%;
-    }
+	.schedPractice.faded {
+		background-color: rgba(113, 127, 255, 0.4);
+	}
 
-    .schedLecture td,
-    .schedPractice td {
-        border: none;
-    }
+	.schedLecture {
+		background-color: rgb(255, 100, 100);
+		width: 100%;
+	}
 
-    td,
-    th {
-        border: 1px solid black;
-        min-width: 75px;
-    }
+	.schedLecture.faded {
+		background-color: rgba(255, 100, 100, 0.4);
+	}
 
-    th {
-        background-color: grey;
-    }
+	.schedLecture td,
+	.schedPractice td {
+		border: none;
+	}
+
+	td,
+	th {
+		border: 1px solid black;
+		min-width: 75px;
+	}
+
+	th {
+		background-color: grey;
+		height: 63px;
+	}
+
+	#container {
+		position: relative;
+	}
+
+	.marker {
+		position: absolute;
+		width: 3px;
+		height: 60px;
+		background-color: red;
+	}
+
+	.markerDot {
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background-color: red;
+	}
 </style>
 
-<table>
-    <tbody>
-        <tr>
-            <th>SEN0074</th>
-            <th>7:15<br>8:00
-            </th>
-            <th>8:00<br>8:45
-            </th>
-            <th>9:00<br>9:45
-            </th>
-            <th>9:45<br>10:30
-            </th>
-            <th>10:45<br>11:30
-            </th>
-            <th>11:30<br>12:15
-            </th>
-            <th>12:30<br>13:15
-            </th>
-            <th>13:15<br>14:00
-            </th>
-            <th>14:15<br>15:00
-            </th>
-            <th>15:00<br>15:45
-            </th>
-            <th>16:00<br>16:45
-            </th>
-            <th>16:45<br>17:30
-            </th>
-            <th>17:45<br>18:30
-            </th>
-            <th>18:30<br>19:15
-            </th>
-        </tr>
-        <tr>
-            <th rowspan="1"><span title="Pondělí">Pondělí</span></th>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td colspan="2">
-                <table class="actTable schedLecture  ">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Vývoj internetových aplikací">VIA</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span title="Ing. Michal Radecký, Ph.D.">M. Radecký</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>POREC2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td colspan="2">
-                <table class="schedLecture">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Počítačové sítě">POS</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>P. Moravec</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td colspan="2">
-                <table class="schedPractice">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Vývoj internetových aplikací">VIA</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span title="Ing. Michal Radecký, Ph.D.">M. Radecký</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>POREB113</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td colspan="2">
-                <table class="schedPractice">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Tvorba aplikací pro mobilní zařízení II">TAMZ II</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span title="Ing. Radovan Fusek, Ph.D.">R. Fusek</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>PORRV203</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <th rowspan="1"><span title="Úterý">Úterý</span></th>
-            <td colspan="2">
-                <table class="schedLecture">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Informační systémy pro elektronické podnikání">ISEP</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span title="Ing. Radoslav Fasuga, Ph.D.">R. Fasuga</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>PORUA4</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td colspan="2">
-                <table class="schedPractice">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Informační systémy pro elektronické podnikání">ISEP</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span title="Ing. Radoslav Fasuga, Ph.D.">R. Fasuga</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>POREB406</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td colspan="2">
-                <table class="schedLecture">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Vývoj informačních systémů">VIS</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>M. Kudělka</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <th rowspan="1"><span title="Středa">Středa</span></th>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td colspan="2">
-                <table class="schedPractice">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Architektura technologie .NET">AT .NET</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span title="Ing. Jan Janoušek">J. Janoušek</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>PORRV203</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td colspan="2">
-                <table class="schedLecture">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Tvorba aplikací pro mobilní zařízení II">TAMZ II</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span title="Mgr. Ing. Michal Krumnikl, Ph.D.">M. Krumnikl</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>POREC3</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td colspan="2">
-                <table class="schedLecture">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Architektura technologie .NET">AT .NET</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span title="Ing. Jan Janoušek">J. Janoušek</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>POREC3</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td colspan="2">
-                <table class="schedLecture">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Esport, základní principy a metody">ESPORT</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span
-                                    title="Ing. Jan Rozhon, Ph.D., Ing. Filip Řezáč, Ph.D., Ing. Jakub Čubík, Ph.D., Ing. Jan Plucar, Ph.D., prof. Ing. Ivan Zelinka, Ph.D.">J.
-                                    Rozhon, F. Řezáč,...</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>POREC3</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td colspan="2">
-                <table class="schedPractice">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Esport, základní principy a metody">ESPORT</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span
-                                    title="Ing. Jan Rozhon, Ph.D., Ing. Filip Řezáč, Ph.D., Ing. Jakub Čubík, Ph.D., Ing. Jan Plucar, Ph.D., Ing. Lenka Skanderová, Ph.D.">J.
-                                    Rozhon, F. Řezáč,...</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>POREB317</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <th rowspan="1"><span title="Čtvrtek">Čtvrtek</span></th>
-            <td colspan="2">
-                <table class="schedPractice">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Vývoj informačních systémů">VIS</abbr><b>
-                                    Sudý</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span title="Ing. Jakub Plesník">J. Plesník</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-            </td>
-            <td colspan="3">
-                <table class="schedPractice">
-                    <tbody>
-                        <tr>
-                            <td>
-                                <abbr title="Počítačové sítě">POS</abbr>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span>K. Bambušková</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <th rowspan="1"><span title="Pátek">Pátek</span></th>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div id="clock" style="display: inline;">
+	Hodiny
+</div>
+<button onclick="highlightLectures()">Jen Přednášky</button>
+<button onclick="highlightPractises()">Jen Cvičení</button>
+<button onclick="highlightAll()">Vše</button>
+<div id="container">
+	<table>
+		<tbody>
+			<tr>
+				<th>SEN0074</th>
+				<th>7:15<br>8:00
+				</th>
+				<th>8:00<br>8:45
+				</th>
+				<th>9:00<br>9:45
+				</th>
+				<th>9:45<br>10:30
+				</th>
+				<th>10:45<br>11:30
+				</th>
+				<th>11:30<br>12:15
+				</th>
+				<th>12:30<br>13:15
+				</th>
+				<th>13:15<br>14:00
+				</th>
+				<th>14:15<br>15:00
+				</th>
+				<th>15:00<br>15:45
+				</th>
+				<th>16:00<br>16:45
+				</th>
+				<th>16:45<br>17:30
+				</th>
+				<th>17:45<br>18:30
+				</th>
+				<th>18:30<br>19:15
+				</th>
+			</tr>
+			<tr>
+				<th><span title="Pondělí">Pondělí</span></th>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td colspan="2">
+					<table class="actTable schedLecture">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Vývoj internetových aplikací">VIA</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span title="Ing. Michal Radecký, Ph.D.">M. Radecký</span>
+								</td>
+							</tr>
+							<tr>
+								<td>POREC2</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td colspan="2">
+					<table class="schedLecture">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Počítačové sítě">POS</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span>P. Moravec</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td colspan="2">
+					<table class="schedPractice">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Vývoj internetových aplikací">VIA</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span title="Ing. Michal Radecký, Ph.D.">M. Radecký</span>
+								</td>
+							</tr>
+							<tr>
+								<td>POREB113</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td colspan="2">
+					<table class="schedPractice">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Tvorba aplikací pro mobilní zařízení II">TAMZ II</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span title="Ing. Radovan Fusek, Ph.D.">R. Fusek</span>
+								</td>
+							</tr>
+							<tr>
+								<td>PORRV203</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<th rowspan="1"><span title="Úterý">Úterý</span></th>
+				<td colspan="2">
+					<table class="schedLecture">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Informační systémy pro elektronické podnikání">ISEP</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span title="Ing. Radoslav Fasuga, Ph.D.">R. Fasuga</span>
+								</td>
+							</tr>
+							<tr>
+								<td>PORUA4</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td colspan="2">
+					<table class="schedPractice">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Informační systémy pro elektronické podnikání">ISEP</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span title="Ing. Radoslav Fasuga, Ph.D.">R. Fasuga</span>
+								</td>
+							</tr>
+							<tr>
+								<td>POREB406</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td colspan="2">
+					<table class="schedLecture">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Vývoj informačních systémů">VIS</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span>M. Kudělka</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<th rowspan="1"><span title="Středa">Středa</span></th>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td colspan="2">
+					<table class="schedPractice">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Architektura technologie .NET">AT .NET</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span title="Ing. Jan Janoušek">J. Janoušek</span>
+								</td>
+							</tr>
+							<tr>
+								<td>PORRV203</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td colspan="2">
+					<table class="schedLecture">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Tvorba aplikací pro mobilní zařízení II">TAMZ II</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span title="Mgr. Ing. Michal Krumnikl, Ph.D.">M. Krumnikl</span>
+								</td>
+							</tr>
+							<tr>
+								<td>POREC3</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td colspan="2">
+					<table class="schedLecture">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Architektura technologie .NET">AT .NET</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span title="Ing. Jan Janoušek">J. Janoušek</span>
+								</td>
+							</tr>
+							<tr>
+								<td>POREC3</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td colspan="2">
+					<table class="schedLecture">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Esport, základní principy a metody">ESPORT</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span
+										title="Ing. Jan Rozhon, Ph.D., Ing. Filip Řezáč, Ph.D., Ing. Jakub Čubík, Ph.D., Ing. Jan Plucar, Ph.D., prof. Ing. Ivan Zelinka, Ph.D.">J.
+										Rozhon, F. Řezá...</span>
+								</td>
+							</tr>
+							<tr>
+								<td>POREC3</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td colspan="2">
+					<table class="schedPractice">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Esport, základní principy a metody">ESPORT</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span
+										title="Ing. Jan Rozhon, Ph.D., Ing. Filip Řezáč, Ph.D., Ing. Jakub Čubík, Ph.D., Ing. Jan Plucar, Ph.D., Ing. Lenka Skanderová, Ph.D.">J.
+										Rozhon, F. Řezá...</span>
+								</td>
+							</tr>
+							<tr>
+								<td>POREB317</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<th rowspan="1"><span title="Čtvrtek">Čtvrtek</span></th>
+				<td colspan="2">
+					<table class="schedPractice">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Vývoj informačních systémů">VIS</abbr><b>
+										Sudý</b>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span title="Ing. Jakub Plesník">J. Plesník</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+				</td>
+				<td colspan="3">
+					<table class="schedPractice">
+						<tbody>
+							<tr>
+								<td>
+									<abbr title="Počítačové sítě">POS</abbr>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span>K. Bambušková</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<th rowspan="1"><span title="Pátek">Pátek</span></th>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<script>
+
+	setInterval(() => {
+		document.getElementById("clock").innerHTML = new Date().toLocaleString();
+		marker();
+	}, 1000);
+
+	function highlightLectures() {
+		Array.from(document.getElementsByClassName("schedPractice")).forEach(element => {
+			element.classList.add("faded");
+		});
+
+		Array.from(document.getElementsByClassName("schedLecture")).forEach(element => {
+			element.classList.remove("faded");
+		});
+	}
+
+	function highlightPractises() {
+		Array.from(document.getElementsByClassName("schedLecture")).forEach(element => {
+			element.classList.add("faded");
+		});
+
+		Array.from(document.getElementsByClassName("schedPractice")).forEach(element => {
+			element.classList.remove("faded");
+		});
+	}
+
+	function highlightAll() {
+		Array.from(document.getElementsByClassName("schedPractice")).forEach(element => {
+			element.classList.remove("faded");
+		});
+		Array.from(document.getElementsByClassName("schedLecture")).forEach(element => {
+			element.classList.remove("faded");
+		});
+	}
+
+	function marker() {
+		const date = new Date();
+		const day = date.getDay();
+		if (day >= 1 && day <= 5) {
+			const hour = date.getHours();
+			const minutes = date.getMinutes();
+
+			const topOffset = 65;
+			const leftOffset = 76;
+			const cellSizeY = 63;
+			const cellSizeX = 78;
+
+			const targetCell = hour < 14 ? hour - 7 : hour - 6;
+			const targetDay = day - 1;
+
+			let minuteOffset = 0;
+			switch (hour) {
+				case 7:
+					if (minutes < 15) return;
+					minuteOffset = map(15, 60, 0, cellSizeX, minutes);
+					break;
+				case 8:
+					if (minutes > 45) {
+						minuteOffset = map(0, 45, 0, cellSizeX, 45);
+						break;
+					}
+					minuteOffset = map(0, 45, 0, cellSizeX, minutes);
+					break;
+				case 9:
+					minuteOffset = map(0, 45, 0, cellSizeX, minutes);
+					break;
+				case 10:
+					if (minutes > 45) {
+						minuteOffset = map(45, 59, cellSizeX, cellSizeX + cellSizeX / 2, minutes);
+						break;
+					}
+					if (minutes > 30) {
+						minuteOffset = map(0, 30, cellSizeX / 3, cellSizeX, 30);
+						break;
+					}
+					minuteOffset = map(0, 30, cellSizeX / 3, cellSizeX, minutes);
+					break;
+				case 11:
+					minuteOffset = map(0, 30, cellSizeX / 2, cellSizeX, minutes);
+					break;
+				case 12:
+					if (minutes > 30) {
+						minuteOffset = map(30, 59, cellSizeX, cellSizeX + cellSizeX / 2, minutes);
+						break;
+					}
+					if (minutes > 15) {
+						minuteOffset = map(0, 15, cellSizeX / 2, cellSizeX, 15);
+						break;
+					}
+					minuteOffset = map(0, 15, cellSizeX / 2, cellSizeX, minutes);
+					break;
+				case 13:
+					if (minutes > 15) {
+						minuteOffset = map(15, 59, cellSizeX, cellSizeX * 2, minutes);
+						break;
+					}
+					minuteOffset = map(0, 15, cellSizeX / 2, cellSizeX, minutes);
+					break;
+				case 14:
+					if (minutes < 15) {
+						minuteOffset = map(15, 59, 0, cellSizeX, 15);
+						break;
+					}
+					minuteOffset = map(15, 59, 0, cellSizeX, minutes);
+					break;
+				case 15:
+					if (minutes > 45) {
+						minuteOffset = map(0, 45, 0, cellSizeX, 45);
+						break;
+					}
+					minuteOffset = map(0, 45, 0, cellSizeX, minutes);
+					break;
+				case 16:
+					minuteOffset = map(0, 45, 0, cellSizeX, minutes);
+					break;
+				case 17:
+					if (minutes > 45) {
+						minuteOffset = map(45, 59, cellSizeX, cellSizeX + cellSizeX / 3, minutes);
+						break;
+					}
+					if (minutes > 30) {
+						minuteOffset = map(0, 30, cellSizeX / 3, cellSizeX, 30);
+						break;
+					}
+					minuteOffset = map(0, 30, cellSizeX / 3, cellSizeX, minutes);
+					break;
+				case 18:
+					minuteOffset = map(0, 30, cellSizeX / 3, cellSizeX, minutes);
+					break;
+				case 19:
+					if (minutes > 15) return;
+					minuteOffset = map(0, 15, cellSizeX - cellSizeX / 3, cellSizeX, minutes);
+					break;
+				default: return;
+			}
+			const el = document.createElement("div");
+			el.classList.add("marker");
+
+			el.style.top = topOffset + targetDay * cellSizeY;
+			el.style.left = leftOffset + targetCell * cellSizeX + minuteOffset;
+
+			const elDot = document.createElement("div");
+			elDot.classList.add("markerDot");
+
+			elDot.style.top = -7 + topOffset + targetDay * cellSizeY;
+			elDot.style.left = -4 + leftOffset + targetCell * cellSizeX + minuteOffset;
+			if (document.getElementById("container").lastChild.tagName == "DIV") {
+				document.getElementById("container").removeChild(document.getElementById("container").lastChild);
+				document.getElementById("container").removeChild(document.getElementById("container").lastChild);
+			}
+			document.getElementById("container").appendChild(el);
+			document.getElementById("container").appendChild(elDot);
+		}
+	}
+
+	function map(min1, max1, min2, max2, value) {
+		return (value - min1) * (max2 - min2) / (max1 - min1) + min2;
+	}
+</script>
